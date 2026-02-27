@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Jean Raniel Go — Full-Stack & Mobile Developer specializing in modern web experiences, UI/UX, and system design. BSIT student at MSEUF." />
+  <meta property="og:title" content="Jean Raniel Go | Full-Stack Developer Portfolio" />
+  <meta property="og:description"
+    content="Minimalist, modern developer portfolio showcasing real projects built with React, Next.js, Firebase, Laravel, Django and more." />
+  <meta property="og:type" content="website" />
+  <title>Jean Raniel Go | Full-Stack Developer</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/motion.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+
+<body>
+
+  <!-- Cursor glow (light mode desktop only) -->
+  <div id="cursorGlow" aria-hidden="true"></div>
+  <!-- Particle canvas -->
+  <canvas id="particleCanvas" aria-hidden="true"></canvas>
+
+  <!-- ================================================
+     NAVBAR
+     ================================================ -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container nav-inner">
+
+      <a href="#home" class="nav-logo" aria-label="Jean Raniel Go — Home">
+        <span class="nav-logo-name">Jean Raniel</span>
+        <span class="nav-logo-role">Full-Stack Dev</span>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+        <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+        <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+          🌙
+        </button>
+        <a href="#contact" class="btn btn-primary" style="padding:10px 20px;font-size:0.82rem;">
+          Hire Me
+        </a>
+        <button class="nav-hamburger" id="navHamburger" aria-label="Open mobile menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- Mobile drawer -->
+  <div class="nav-mobile-overlay" id="mobileOverlay" aria-hidden="true"></div>
+  <nav class="nav-mobile-drawer" id="mobileDrawer" aria-label="Mobile navigation">
+    <a href="#about" class="nav-drawer-link">About <span>→</span></a>
+    <a href="#skills" class="nav-drawer-link">Skills <span>→</span></a>
+    <a href="#projects" class="nav-drawer-link">Projects <span>→</span></a>
+    <a href="#experience" class="nav-drawer-link">Experience <span>→</span></a>
+    <a href="#contact" class="nav-drawer-link">Contact <span>→</span></a>
+  </nav>
+
+
+  <!-- ================================================
+     HERO SECTION
+     ================================================ -->
+  <section class="hero" id="home">
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="hero-mesh-1" aria-hidden="true"></div>
+    <div class="hero-mesh-2" aria-hidden="true"></div>
+    <div class="hero-mesh-3" aria-hidden="true"></div>
+    <div class="hero-blob hero-blob-1" aria-hidden="true"></div>
+    <div class="hero-blob hero-blob-2" aria-hidden="true"></div>
+    <div class="hero-blob hero-blob-3" aria-hidden="true"></div>
+
+    <div class="container hero-inner">
+
+      <div class="hero-pre reveal">
+        <span class="hero-pre-dot" aria-hidden="true"></span>
+        Available for OJT &amp; Freelance Projects
+      </div>
+
+      <h1 class="hero-headline reveal reveal-delay-1">
+        Building digital<br />
+        <span class="hero-headline-accent">experiences</span><br />
+        that matter.
+      </h1>
+
+      <p class="hero-typing-line reveal reveal-delay-2">
+        I craft —&nbsp;
+        <span id="typing-text" aria-live="polite"></span>
+        <span class="typing-cursor" aria-hidden="true"></span>
+      </p>
+
+      <div class="hero-cta reveal reveal-delay-3">
+        <a href="#projects" class="btn btn-primary">
+          <span>View Projects</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+        <a href="#contact" class="btn btn-outline">Let's Talk</a>
+      </div>
+
+      <div class="hero-stats reveal reveal-delay-4" role="list">
+        <div class="hero-stat-item" role="listitem">
+          <span class="hero-stat-value">4+</span>
+          <span class="hero-stat-label">Deployed Projects</span>
+        </div>
+        <div class="hero-stat-item" role="listitem">
+          <span class="hero-stat-value">5+</span>
+          <span class="hero-stat-label">Years of Study</span>
+        </div>
+        <div class="hero-stat-item" role="listitem">
+          <span class="hero-stat-value">15+</span>
+          <span class="hero-stat-label">Technologies</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating code card (desktop) -->
+    <div class="hero-code-card" aria-hidden="true">
+      <div class="code-card-bar">
+        <span class="code-dot code-dot-red"></span>
+        <span class="code-dot code-dot-yellow"></span>
+        <span class="code-dot code-dot-green"></span>
+      </div>
+      <div class="code-line"><span class="code-comment">// Jean Raniel Go</span></div>
+      <div class="code-line"><span class="code-keyword">const</span> <span class="code-fn">developer</span> = {</div>
+      <div class="code-line code-indent">name: <span class="code-str">'Jean Raniel'</span>,</div>
+      <div class="code-line code-indent">role: <span class="code-str">'Full-Stack Dev'</span>,</div>
+      <div class="code-line code-indent">stack: [<span class="code-str">'Next.js'</span>, <span
+          class="code-str">'Firebase'</span>],</div>
+      <div class="code-line code-indent">mobile: [<span class="code-str">'React Native'</span>, <span
+          class="code-str">'Swift'</span>],</div>
+      <div class="code-line code-indent">coffee: <span class="code-keyword">true</span> ☕</div>
+      <div class="code-line">};</div>
+    </div>
+
+    <a href="#about" class="hero-scroll-hint" aria-label="Scroll to About section">
+      <span>Scroll</span>
+      <div class="scroll-arrow" aria-hidden="true"></div>
+    </a>
+  </section>
+
+
+  <!-- ================================================
+     ABOUT SECTION
+     ================================================ -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="about-grid">
+
+        <!-- Avatar -->
+        <div class="about-avatar-wrap reveal reveal-left">
+          <div class="about-avatar">
+            <div class="avatar-ring">
+              <div class="avatar-ring-inner"></div>
+            </div>
+            <div class="avatar-img">
+              <svg class="avatar-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"
+                aria-label="Developer avatar illustration">
+                <!-- Abstract dev avatar -->
+                <defs>
+                  <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#60a5fa" />
+                    <stop offset="100%" style="stop-color:#8b5cf6" />
+                  </linearGradient>
+                  <linearGradient id="screenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#0f172a" />
+                    <stop offset="100%" style="stop-color:#1e293b" />
+                  </linearGradient>
+                </defs>
+                <!-- Head -->
+                <circle cx="100" cy="70" r="35" fill="url(#avatarGrad)" opacity="0.9" />
+                <!-- Body -->
+                <rect x="62" y="108" width="76" height="55" rx="16" fill="url(#avatarGrad)" opacity="0.7" />
+                <!-- Screen / laptop -->
+                <rect x="30" y="145" width="140" height="32" rx="6" fill="url(#screenGrad)" stroke="#60a5fa"
+                  stroke-width="1.5" />
+                <!-- Code lines on screen -->
+                <rect x="38" y="152" width="40" height="3" rx="1.5" fill="#60a5fa" opacity="0.7" />
+                <rect x="38" y="159" width="60" height="3" rx="1.5" fill="#8b5cf6" opacity="0.7" />
+                <rect x="38" y="166" width="30" height="3" rx="1.5" fill="#10b981" opacity="0.7" />
+                <!-- Glasses -->
+                <rect x="78" y="62" width="18" height="13" rx="4" fill="none" stroke="#fff" stroke-width="2"
+                  opacity="0.9" />
+                <rect x="104" y="62" width="18" height="13" rx="4" fill="none" stroke="#fff" stroke-width="2"
+                  opacity="0.9" />
+                <line x1="96" y1="68" x2="104" y2="68" stroke="#fff" stroke-width="2" opacity="0.7" />
+                <!-- Hair -->
+                <ellipse cx="100" cy="42" rx="30" ry="14" fill="#1e1b4b" opacity="0.9" />
+                <!-- Stars/sparkles -->
+                <circle cx="22" cy="55" r="3" fill="#60a5fa" opacity="0.5" />
+                <circle cx="175" cy="80" r="2" fill="#8b5cf6" opacity="0.5" />
+                <circle cx="165" cy="48" r="4" fill="#10b981" opacity="0.4" />
+                <circle cx="35" cy="120" r="2.5" fill="#60a5fa" opacity="0.4" />
+              </svg>
+            </div>
+            <div class="orbit-ring">
+              <div class="orbit-dot"></div>
+            </div>
+            <div class="orbit-ring orbit-ring-2">
+              <div class="orbit-dot orbit-dot-2"></div>
+            </div>
+            <div class="avatar-badge">
+              <span class="avatar-badge-value">BSIT</span>
+              <span class="avatar-badge-label">MSEUF<br />2020–Now</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Text -->
+        <div class="about-text reveal reveal-right">
+          <div>
+            <p class="section-label">About Me</p>
+            <h2 class="section-title">Motivated IT student.<br />Hands-on builder.</h2>
+          </div>
+          <p class="about-bio">
+            I'm <strong>Jean Raniel Yabao Go</strong>, a BSIT student at Manuel S. Enverga University Foundation (MSEUF)
+            specializing in <strong>Web &amp; Mobile Application Development</strong>. I'm motivated, adaptable, and
+            eager to apply my skills through OJT and real-world projects.
+          </p>
+          <p class="about-bio">
+            From real estate platforms to gaming communities and bakery e-commerce, I've shipped production applications
+            across diverse domains — always with a focus on <strong>clean code</strong>, <strong>smooth UI</strong>, and
+            <strong>real user impact</strong>.
+          </p>
+          <div class="about-highlights">
+            <div class="about-highlight-item reveal reveal-scale reveal-delay-1">
+              <div class="highlight-icon">🌐</div>
+              <div class="highlight-title">Web Dev</div>
+              <div class="highlight-desc">Next.js, Laravel, Django, Bootstrap</div>
+            </div>
+            <div class="about-highlight-item reveal reveal-scale reveal-delay-2">
+              <div class="highlight-icon">📱</div>
+              <div class="highlight-title">Mobile Dev</div>
+              <div class="highlight-desc">React Native, SwiftUI</div>
+            </div>
+            <div class="about-highlight-item reveal reveal-scale reveal-delay-3">
+              <div class="highlight-icon">🗄️</div>
+              <div class="highlight-title">Backend &amp; DB</div>
+              <div class="highlight-desc">MySQL, Firebase, MongoDB</div>
+            </div>
+            <div class="about-highlight-item reveal reveal-scale reveal-delay-4">
+              <div class="highlight-icon">🎨</div>
+              <div class="highlight-title">UI/UX Design</div>
+              <div class="highlight-desc">Wireframing, Prototyping, Figma</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================
+     SKILLS SECTION
+     ================================================ -->
+  <section class="section skills" id="skills">
+    <div class="container">
+      <div class="skills-header">
+        <p class="section-label reveal">Tech Stack</p>
+        <h2 class="section-title reveal">Tools I work with</h2>
+        <p class="section-desc reveal">A carefully selected, constantly evolving set of technologies for building modern
+          web applications end-to-end.</p>
+      </div>
+      <div class="skills-grid">
+
+        <div class="skills-category reveal reveal-delay-1">
+          <div class="skills-category-header">
+            <div class="skills-category-icon">🖥️</div>
+            <span class="skills-category-name">Frontend</span>
+          </div>
+          <div class="skills-tags">
+            <span class="skill-badge">HTML5</span>
+            <span class="skill-badge">CSS3</span>
+            <span class="skill-badge">JavaScript</span>
+            <span class="skill-badge">React</span>
+            <span class="skill-badge">Next.js</span>
+            <span class="skill-badge">Bootstrap</span>
+            <span class="skill-badge">UI/UX Design</span>
+            <span class="skill-badge">Wireframing</span>
+          </div>
+        </div>
+
+        <div class="skills-category reveal reveal-delay-2">
+          <div class="skills-category-header">
+            <div class="skills-category-icon">🗄️</div>
+            <span class="skills-category-name">Backend &amp; Database</span>
+          </div>
+          <div class="skills-tags">
+            <span class="skill-badge">PHP</span>
+            <span class="skill-badge">Laravel</span>
+            <span class="skill-badge">Django</span>
+            <span class="skill-badge">Python</span>
+            <span class="skill-badge">Java</span>
+            <span class="skill-badge">C#</span>
+            <span class="skill-badge">MySQL</span>
+            <span class="skill-badge">Firebase</span>
+            <span class="skill-badge">MongoDB</span>
+          </div>
+        </div>
+
+        <div class="skills-category reveal reveal-delay-3">
+          <div class="skills-category-header">
+            <div class="skills-category-icon">📱</div>
+            <span class="skills-category-name">Mobile &amp; Tools</span>
+          </div>
+          <div class="skills-tags">
+            <span class="skill-badge">React Native</span>
+            <span class="skill-badge">Swift UI</span>
+            <span class="skill-badge">Git &amp; GitHub</span>
+            <span class="skill-badge">Vercel</span>
+            <span class="skill-badge">Windows OS</span>
+            <span class="skill-badge">Computer Repair</span>
+            <span class="skill-badge">Cisco Networking</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================
+     PROJECTS SECTION
+     ================================================ -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <div class="projects-header">
+        <div>
+          <p class="section-label reveal">Portfolio</p>
+          <h2 class="section-title reveal">Featured Projects</h2>
+          <p class="section-desc reveal">Real-world applications built and deployed, each solving a specific user
+            problem.</p>
+        </div>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid">
+        <!-- Injected by projects.js -->
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================
+     EXPERIENCE SECTION
+     ================================================ -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="experience-layout">
+
+        <!-- Timeline -->
+        <div>
+          <p class="section-label reveal">Work History</p>
+          <h2 class="section-title reveal">Experience</h2>
+
+          <div class="experience-timeline reveal reveal-delay-1">
+            <div class="timeline-line" aria-hidden="true"></div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot" aria-hidden="true"></div>
+              <div class="timeline-date">2024 — Present</div>
+              <div class="timeline-role">Freelance Web Developer</div>
+              <div class="timeline-company">Self-Employed · Remote</div>
+              <ul class="timeline-bullets">
+                <li class="timeline-bullet">Designed and deployed real estate, bakery e-commerce, and gaming community
+                  platforms to Vercel</li>
+                <li class="timeline-bullet">Built Gameteract — full-stack gaming platform with Firebase auth, real-time
+                  Firestore, and React</li>
+                <li class="timeline-bullet">Managed full project lifecycle: UI/UX design, development, deployment, and
+                  post-launch refinement</li>
+              </ul>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot" aria-hidden="true"></div>
+              <div class="timeline-date">February 2024</div>
+              <div class="timeline-role">Web Development Bootcamp</div>
+              <div class="timeline-company">Zoom Online Conference</div>
+              <ul class="timeline-bullets">
+                <li class="timeline-bullet">Intensive training on modern full-stack web development practices</li>
+                <li class="timeline-bullet">Covered JavaScript frameworks, REST APIs, database integration, and
+                  deployment pipelines</li>
+              </ul>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot" aria-hidden="true"></div>
+              <div class="timeline-date">2020 — Present</div>
+              <div class="timeline-role">BSIT Student</div>
+              <div class="timeline-company">Manuel S. Enverga University Foundation · Lucena City</div>
+              <ul class="timeline-bullets">
+                <li class="timeline-bullet">Specializing in Web &amp; Mobile Application Development</li>
+                <li class="timeline-bullet">Applied classroom learning through real deployed projects for actual clients
+                </li>
+                <li class="timeline-bullet">Completed Coursera certifications in Cisco Networking and Django Web Apps
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Education -->
+        <div>
+          <p class="section-label reveal">Education</p>
+          <h2 class="section-title reveal">Background</h2>
+
+          <div class="education-panel reveal reveal-delay-1">
+
+            <div class="education-card">
+              <div class="edu-icon">🎓</div>
+              <div class="edu-degree">BS Information Technology</div>
+              <div class="edu-school">Manuel S. Enverga University Foundation (MSEUF)</div>
+              <div class="edu-years">2020 — Present · Lucena City</div>
+            </div>
+
+            <div class="education-card">
+              <div class="edu-icon">📜</div>
+              <div class="edu-degree">Coursera Certifications</div>
+              <div class="edu-school">Basics of Cisco Networking · Building Web Apps in Django</div>
+              <div class="edu-years">PACKT &amp; Coursera</div>
+            </div>
+
+            <div class="education-card">
+              <div class="edu-icon">⚡</div>
+              <div class="edu-degree">Web Development Bootcamp</div>
+              <div class="edu-school">Via Zoom Online Conference</div>
+              <div class="edu-years">February 2024</div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================
+     CONTACT SECTION
+     ================================================ -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="contact-layout">
+
+        <!-- Info -->
+        <div class="contact-info reveal reveal-left">
+          <div>
+            <p class="section-label">Get in Touch</p>
+            <h2 class="section-title">Let's build<br />something great.</h2>
+          </div>
+          <p class="contact-info-desc">
+            Whether you have a project idea, a freelance opportunity, or an OJT offer — I'd love to hear from you.
+            Motivated IT student, eager to contribute to a dynamic team.
+          </p>
+          <div class="contact-items">
+            <div class="contact-item">
+              <div class="contact-item-icon" aria-hidden="true">📧</div>
+              <div>
+                <div class="contact-item-label">Email</div>
+                <div class="contact-item-value">raniel.go112@gmail.com</div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon" aria-hidden="true">📱</div>
+              <div>
+                <div class="contact-item-label">Phone</div>
+                <div class="contact-item-value">+63 916 313 9047</div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon" aria-hidden="true">📍</div>
+              <div>
+                <div class="contact-item-label">Location</div>
+                <div class="contact-item-value">Ibabang Dubay, Lucena City</div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon" aria-hidden="true">⚡</div>
+              <div>
+                <div class="contact-item-label">Status</div>
+                <div class="contact-item-value">Open to OJT &amp; Freelance</div>
+              </div>
+            </div>
+          </div>
+          <div class="socials-row">
+            <a href="#" class="social-btn" aria-label="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12" />
+              </svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="Twitter/X">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.736l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="Vercel deployments">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M24 22.525H0l12-21.05 12 21.05z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div class="contact-form reveal reveal-right">
+          <form id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contactName">Name</label>
+                <input type="text" id="contactName" name="name" placeholder="John Doe" autocomplete="name" />
+                <span class="form-error-msg">Please enter your name.</span>
+              </div>
+              <div class="form-group">
+                <label for="contactEmail">Email</label>
+                <input type="email" id="contactEmail" name="email" placeholder="john@example.com"
+                  autocomplete="email" />
+                <span class="form-error-msg">Please enter a valid email.</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contactSubject">Subject</label>
+              <input type="text" id="contactSubject" name="subject" placeholder="Project inquiry, collaboration…" />
+              <span class="form-error-msg">Please enter a subject.</span>
+            </div>
+            <div class="form-group">
+              <label for="contactMessage">Message</label>
+              <textarea id="contactMessage" name="message"
+                placeholder="Tell me about your project, timeline, and goals…"></textarea>
+              <span class="form-error-msg">Message must be at least 20 characters.</span>
+            </div>
+            <div class="form-submit-wrap">
+              <button type="submit" class="btn btn-primary form-submit" id="formSubmitBtn">
+                <span>Send Message</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round">
+                  <path d="M22 2L11 13M22 2L15 22 11 13 2 9l20-7z" />
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================
+     FOOTER
+     ================================================ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p class="footer-copy">
+        © 2025 <strong>Jean Raniel Go</strong> — Crafted with ❤️ and clean code.
+      </p>
+      <div style="display:flex;align-items:center;gap:16px;">
+        <span style="font-size:0.8rem;color:var(--clr-text-muted)">Built with HTML · CSS · JS</span>
+        <a href="#home" class="scroll-top" aria-label="Scroll to top">↑</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ================================================
+     PROJECT MODAL
+     ================================================ -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle"
+    aria-hidden="true">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div>
+          <p class="project-category" id="modalCategory"></p>
+          <h2 class="project-card-title" id="modalTitle" style="font-size:1.5rem;margin-bottom:0;"></h2>
+        </div>
+        <button class="modal-close" id="modalClose" aria-label="Close modal">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-visual" id="modalVisual"></div>
+        <p class="modal-desc" id="modalDesc"></p>
+        <div class="modal-features" id="modalFeatures"></div>
+        <div class="modal-tech-row" id="modalTech"></div>
+        <div class="modal-actions" id="modalActions"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast" role="alert" aria-live="assertive">
+    <span class="toast-icon" id="toastIcon"></span>
+    <span class="toast-msg" id="toastMsg"></span>
+  </div>
+
+
+  <!-- ================================================
+     SCRIPTS
+     ================================================ -->
+  <script src="js/projects.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/motion.js"></script>
+</body>
+
+</html>

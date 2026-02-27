@@ -1,0 +1,123 @@
+/* ===================================================
+   DESIGN TOKENS — Complementary Light & Dark Mode
+   =================================================== */
+
+:root {
+  /* ── Palette (Light) — Warm Ivory + Bold Ink ── */
+  --clr-bg: #faf9f6;
+  --clr-bg-alt: #f0ede6;
+  --clr-surface: #ffffff;
+  --clr-border: rgba(30, 20, 10, 0.10);
+  --clr-text: #0f0e0b;
+  --clr-text-muted: #6b6659;
+  --clr-text-inv: #faf9f6;
+
+  /* ── Light accent: Electric Indigo + Tangerine ── */
+  --clr-accent: #4f46e5;
+  --clr-accent-2: #f97316;
+  --clr-accent-light: #eef2ff;
+  --clr-accent-dark: #3730a3;
+  --clr-accent-glow: rgba(79, 70, 229, 0.20);
+
+  /* ── Light gradients ── */
+  --gradient-hero: linear-gradient(135deg, #faf9f6 0%, #eef2ff 40%, #fff7ed 100%);
+  --gradient-card: linear-gradient(145deg, #ffffff, #f5f3ee);
+  --gradient-mesh-1: radial-gradient(ellipse at 70% 20%, rgba(79, 70, 229, 0.12) 0%, transparent 60%);
+  --gradient-mesh-2: radial-gradient(ellipse at 20% 80%, rgba(249, 115, 22, 0.10) 0%, transparent 60%);
+  --gradient-mesh-3: radial-gradient(ellipse at 50% 50%, rgba(16, 185, 129, 0.06) 0%, transparent 60%);
+
+  /* ── Navbar ── */
+  --clr-nav-bg: rgba(250, 249, 246, 0.88);
+  --clr-nav-border: rgba(30, 20, 10, 0.07);
+
+  /* ── Shadows (light = deeper, warmer) ── */
+  --shadow-xs: 0 1px 3px rgba(15, 14, 11, 0.07);
+  --shadow-sm: 0 2px 8px rgba(15, 14, 11, 0.09);
+  --shadow-md: 0 4px 20px rgba(15, 14, 11, 0.10);
+  --shadow-lg: 0 12px 40px rgba(15, 14, 11, 0.12);
+  --shadow-xl: 0 24px 64px rgba(15, 14, 11, 0.14);
+  --shadow-accent: 0 8px 30px rgba(79, 70, 229, 0.25);
+
+  /* ── Motion blob colours (light) ── */
+  --blob-1: rgba(79, 70, 229, 0.18);
+  --blob-2: rgba(249, 115, 22, 0.14);
+  --blob-3: rgba(16, 185, 129, 0.12);
+
+  /* ── Typography ── */
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* ── Spacing ── */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+  --sp-8: 32px;
+  --sp-10: 40px;
+  --sp-12: 48px;
+  --sp-16: 64px;
+  --sp-20: 80px;
+  --sp-24: 96px;
+
+  /* ── Border Radius ── */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 32px;
+  --radius-full: 9999px;
+
+  /* ── Transitions ── */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-spring: 350ms cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ── Layout ── */
+  --section-py: clamp(80px, 10vw, 120px);
+  --container: 1200px;
+}
+
+/* ══════════════════════════════════════════════════════
+   DARK MODE — Complementary: Midnight Blue + Soft Cream
+   ══════════════════════════════════════════════════════ */
+
+[data-theme="dark"] {
+  /* Deep midnight blues rather than pure black */
+  --clr-bg: #080c14;
+  --clr-bg-alt: #0d1320;
+  --clr-surface: #111827;
+  --clr-border: rgba(255, 255, 255, 0.07);
+  --clr-text: #eef0f5;
+  --clr-text-muted: #8892a4;
+  --clr-text-inv: #080c14;
+
+  /* Dark accent: Soft sky blue + warm amber */
+  --clr-accent: #60a5fa;
+  --clr-accent-2: #fbbf24;
+  --clr-accent-light: #0f2340;
+  --clr-accent-dark: #93c5fd;
+  --clr-accent-glow: rgba(96, 165, 250, 0.22);
+
+  /* Dark gradients */
+  --gradient-hero: linear-gradient(135deg, #080c14 0%, #0d1a30 50%, #100c20 100%);
+  --gradient-card: linear-gradient(145deg, #111827, #0d1420);
+  --gradient-mesh-1: radial-gradient(ellipse at 70% 20%, rgba(96, 165, 250, 0.14) 0%, transparent 60%);
+  --gradient-mesh-2: radial-gradient(ellipse at 20% 80%, rgba(251, 191, 36, 0.08) 0%, transparent 60%);
+  --gradient-mesh-3: radial-gradient(ellipse at 50% 50%, rgba(167, 139, 250, 0.08) 0%, transparent 60%);
+
+  --clr-nav-bg: rgba(8, 12, 20, 0.88);
+  --clr-nav-border: rgba(255, 255, 255, 0.05);
+
+  --shadow-xs: 0 1px 3px rgba(0, 0, 0, 0.35);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.45);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.55);
+  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.65);
+  --shadow-xl: 0 24px 64px rgba(0, 0, 0, 0.75);
+  --shadow-accent: 0 8px 30px var(--clr-accent-glow);
+
+  --blob-1: rgba(96, 165, 250, 0.16);
+  --blob-2: rgba(251, 191, 36, 0.10);
+  --blob-3: rgba(167, 139, 250, 0.12);
+}
